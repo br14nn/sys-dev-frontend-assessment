@@ -29,7 +29,7 @@ const Navbar = () => {
         <p className="hidden select-none font-bold lg:block">Brian Vitualla</p>
       </div>
       <Button
-        className="w-fit p-0 lg:hidden [&_svg]:size-6"
+        className="w-fit p-0 hover:bg-transparent lg:hidden [&_svg]:size-6"
         id="menuOpenButton"
         variant={"ghost"}
         onClick={handleClick}

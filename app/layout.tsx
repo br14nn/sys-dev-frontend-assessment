@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="snap-y snap-mandatory snap-always">
       <body
         className={`${comicNeue.className} bg-sky-100 text-neutral-950 antialiased`}
       >
