@@ -17,12 +17,19 @@ const Navbar = () => {
 
   return (
     <nav className="fixed z-50 flex w-full items-center justify-between bg-amber-100 px-2 shadow-lg">
-      <div className="flex">
+      <div className="flex w-full items-center sm:justify-between">
         <p className="font-bold">Brian Vitualla</p>
+        <div className="hidden grid-cols-3 lg:grid">
+          <NavLink className="px-6 text-center hover:px-6">Home</NavLink>
+          <NavLink className="px-6 text-center hover:px-6">Projects</NavLink>
+          <NavLink className="px-6 text-center hover:px-6">
+            Collaborations
+          </NavLink>
+        </div>
+        <p className="hidden select-none font-bold lg:block">Brian Vitualla</p>
       </div>
-
       <Button
-        className="w-fit p-0 [&_svg]:size-6"
+        className="w-fit p-0 lg:hidden [&_svg]:size-6"
         id="menuOpenButton"
         variant={"ghost"}
         onClick={handleClick}
@@ -32,14 +39,14 @@ const Navbar = () => {
       {isOpen && (
         <div
           className={
-            "fixed inset-0 z-10 h-full max-h-screen w-full bg-neutral-950/50"
+            "fixed inset-0 z-10 h-full max-h-screen w-full bg-neutral-950/50 lg:hidden"
           }
           id="menuBackgroundCloser"
           onClick={handleClick}
         />
       )}
       <div
-        className={`fixed right-0 top-0 z-20 flex h-full max-h-screen w-44 flex-col gap-8 bg-amber-100 pt-4 transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed right-0 top-0 z-20 flex h-full max-h-screen w-44 flex-col gap-8 bg-amber-100 pt-4 transition-transform duration-300 ease-in-out sm:w-60 lg:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <Button
           className="mr-3 h-fit w-fit self-end p-0 [&_svg]:size-6"
@@ -71,7 +78,7 @@ const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
       <Link
         ref={ref}
         className={cn(
-          "px-3 py-2 font-bold transition-[colors,_padding] duration-300 ease-in-out hover:bg-amber-200 hover:pl-5",
+          "px-3 py-2 font-bold transition-[colors,_padding,_background-color] duration-300 ease-in-out hover:bg-amber-200 hover:pl-5",
           className,
         )}
         href={href}
