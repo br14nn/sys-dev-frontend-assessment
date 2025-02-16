@@ -20,9 +20,11 @@ const Navbar = () => {
       <div className="flex w-full items-center sm:justify-between">
         <p className="font-bold">Brian Vitualla</p>
         <div className="hidden grid-cols-3 lg:grid">
-          <NavLink className="px-6 text-center hover:px-6">Home</NavLink>
-          <NavLink className="px-6 text-center hover:px-6">Projects</NavLink>
-          <NavLink className="px-6 text-center hover:px-6">
+          <NavLink className="px-6 py-3 text-center hover:px-6">Home</NavLink>
+          <NavLink className="px-6 py-3 text-center hover:px-6">
+            Projects
+          </NavLink>
+          <NavLink className="px-6 py-3 text-center hover:px-6">
             Collaborations
           </NavLink>
         </div>
