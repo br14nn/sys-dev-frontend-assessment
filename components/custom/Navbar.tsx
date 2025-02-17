@@ -17,9 +17,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed z-50 flex w-full items-center justify-between bg-amber-100 px-2 shadow-lg">
-      <div className="flex w-full items-center sm:justify-between">
+      <div className="flex w-full items-center sm:justify-between lg:grid lg:grid-cols-4 lg:justify-normal">
         <p className="font-bold">Brian Vitualla</p>
-        <div className="hidden grid-cols-3 lg:grid">
+        <div className="hidden grid-cols-3 justify-self-center lg:col-span-2 lg:grid">
           <NavLink className="px-6 py-3 text-center hover:px-6">Home</NavLink>
           <NavLink className="px-6 py-3 text-center hover:px-6">
             Projects
@@ -28,12 +28,14 @@ const Navbar = () => {
             Collaborations
           </NavLink>
         </div>
-        <p className="hidden select-none font-bold lg:block">Brian Vitualla</p>
+        <p className="hidden select-none justify-self-end font-bold lg:block">
+          Brian Vitualla
+        </p>
       </div>
       <Button
         className="w-fit p-0 hover:bg-transparent lg:hidden [&_svg]:size-6"
         id="menuOpenButton"
-        variant={"ghost"}
+        variant="ghost"
         onClick={handleClick}
       >
         <Menu color="#d97706" />
@@ -51,7 +53,7 @@ const Navbar = () => {
         className={`fixed right-0 top-0 z-20 flex h-full max-h-screen w-44 flex-col gap-8 bg-amber-100 pt-4 transition-transform duration-300 ease-in-out sm:w-60 lg:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <Button
-          className="mr-3 h-fit w-fit self-end p-0 [&_svg]:size-6"
+          className="mr-3 h-fit w-fit self-end p-0 hover:bg-transparent [&_svg]:size-6"
           id="menuCloseButton"
           variant="ghost"
           onClick={handleClick}
