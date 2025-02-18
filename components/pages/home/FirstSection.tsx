@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Github, Facebook } from "lucide-react";
 import Link from "next/link";
-import pfp from "@/images/pfp.png";
+import { pfp } from "@/images";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 

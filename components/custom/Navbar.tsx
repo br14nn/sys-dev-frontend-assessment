@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Button } from "../ui/button";
-import { Menu, X } from "lucide-react/icons";
+import { Menu, X, CodeXml } from "lucide-react/icons";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +29,7 @@ const Navbar = () => {
           </NavLink>
         </div>
         <p className="hidden select-none justify-self-end font-bold lg:block">
-          Brian Vitualla
+          <CodeXml />
         </p>
       </div>
       <Button
