@@ -1,7 +1,11 @@
+import FirstSection from "@/components/pages/home/FirstSection";
+import SecondSection from "@/components/pages/home/SecondSection";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full items-center justify-center">
-      <h1>Home</h1>
-    </main>
+    <>
+      <FirstSection />
+      <SecondSection />
+    </>
   );
 }

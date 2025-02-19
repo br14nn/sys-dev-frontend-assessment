@@ -8,15 +8,20 @@ const comicNeue = Comic_Neue({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: "Home | Brian Vitualla",
+  description: "Home page of Brian Vitualla's portfolio website",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${comicNeue.className} bg-sky-100 text-neutral-950 antialiased`}
+        className={`${comicNeue.className} min-w-[320px] bg-sky-100 text-neutral-950 antialiased`}
       >
         <Navbar />
         {children}
