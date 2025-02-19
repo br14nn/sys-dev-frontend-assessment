@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClick = (
-    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
+    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>,
   ) => {
     setIsOpen((oldVal) => !oldVal);
   };
@@ -20,8 +20,13 @@ const Navbar = () => {
       <div className="flex w-full items-center sm:justify-between lg:grid lg:grid-cols-4 lg:justify-normal">
         <p className="font-bold">Brian Vitualla</p>
         <div className="hidden grid-cols-3 justify-self-center lg:col-span-2 lg:grid">
-          <NavLink className="px-6 py-3 text-center hover:px-6">Home</NavLink>
-          <NavLink className="px-6 py-3 text-center hover:px-6">
+          <NavLink className="px-6 py-3 text-center hover:px-6" href="/">
+            Home
+          </NavLink>
+          <NavLink
+            className="px-6 py-3 text-center hover:px-6"
+            href="/projects"
+          >
             Projects
           </NavLink>
           <NavLink className="px-6 py-3 text-center hover:px-6">
@@ -61,9 +66,13 @@ const Navbar = () => {
           <X color="#d97706" />
         </Button>
         <div className="flex h-fit w-full flex-col">
-          <NavLink>Home</NavLink>
-          <NavLink>Projects</NavLink>
-          <NavLink>Collaborations</NavLink>
+          <NavLink href="/" onClick={handleClick}>
+            Home
+          </NavLink>
+          <NavLink href="/projects" onClick={handleClick}>
+            Projects
+          </NavLink>
+          <NavLink onClick={handleClick}>Collaborations</NavLink>
         </div>
       </div>
     </nav>
