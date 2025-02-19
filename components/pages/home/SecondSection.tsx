@@ -29,15 +29,15 @@ const SecondSection = () => {
   return (
     <section className="flex h-fit w-full items-start justify-center bg-sky-200">
       <LazyMotion features={domAnimation}>
-        <Container className="justify-start px-4 py-8">
+        <Container className="justify-start px-4 pb-8 md:pb-16">
           <m.h2
             ref={h2Scope}
             initial={{ opacity: 0, y: 50 }}
-            className="text-xl font-bold tracking-wider sm:text-2xl md:text-3xl"
+            className="py-8 text-xl font-bold tracking-wider sm:text-2xl md:py-16 md:text-3xl"
           >
             TECH SKILLS
           </m.h2>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
             <TechSkillCard
               title="Typescript"
               description="TypeScript is a statically typed superset of JavaScript that improves code quality and maintainability."
