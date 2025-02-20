@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="overflow-x-hidden scroll-smooth">
       <body
         className={`${comicNeue.className} min-w-[320px] bg-sky-100 text-neutral-950 antialiased`}
       >
