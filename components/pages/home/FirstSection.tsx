@@ -21,7 +21,7 @@ const FirstSection = () => {
       >
         <Container className="min-h-[37.5rem] gap-10 sm:flex-row sm:justify-between sm:gap-0">
           <MImage
-            className="w-[15.625rem] select-none sm:w-[15.625rem] md:w-[340px] lg:w-[28.125rem] xl:w-[31.25rem]"
+            className="w-[15.625rem] select-none sm:w-[15.625rem] md:w-[340px] lg:w-[25rem] xl:w-[450px] 2xl:w-[31.25rem]"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

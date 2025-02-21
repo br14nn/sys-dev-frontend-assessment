@@ -40,7 +40,7 @@ const ProjectCard = ({
   return (
     <LazyMotion features={domAnimation}>
       <m.div ref={scope} initial={{ opacity: 0, y: 50 }}>
-        <Card className="flex flex-col overflow-hidden border-none bg-sky-200 shadow-lg">
+        <Card className="flex flex-col overflow-hidden border-none bg-amber-100 shadow-lg">
           <CardContent className="flex flex-col gap-4 p-6">
             <Image
               className="aspect-[2/1] w-full rounded-md bg-neutral-50 object-cover"
@@ -55,7 +55,7 @@ const ProjectCard = ({
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Button
-                className="bg-amber-200 text-neutral-950 hover:bg-amber-300"
+                className="bg-amber-300 text-neutral-950 hover:bg-amber-400"
                 asChild
               >
                 <Link
@@ -68,7 +68,7 @@ const ProjectCard = ({
                 </Link>
               </Button>
               <Button
-                className="bg-amber-200 text-neutral-950 hover:bg-amber-300"
+                className="bg-amber-300 text-neutral-950 hover:bg-amber-400"
                 asChild
               >
                 <Link
