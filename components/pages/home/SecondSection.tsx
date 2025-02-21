@@ -33,7 +33,7 @@ const SecondSection = () => {
           <m.h2
             ref={h2Scope}
             initial={{ opacity: 0, y: 50 }}
-            className="py-8 text-xl font-bold tracking-wider sm:text-2xl md:py-16 md:text-3xl"
+            className="py-8 text-xl font-bold tracking-wider sm:text-2xl md:py-16 md:text-3xl lg:text-4xl"
           >
             TECH SKILLS
           </m.h2>
