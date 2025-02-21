@@ -31,7 +31,7 @@ const TechSkillCard = ({
     if (isInView) {
       animate(scope.current, { opacity: 1, y: 0 }, { duration: 0.3 });
     }
-  }, [isInView]);
+  }, [isInView, animate, scope]);
 
   return (
     <LazyMotion features={domAnimation}>

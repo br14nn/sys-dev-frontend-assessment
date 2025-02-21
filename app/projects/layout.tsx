@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const metada: Metadata = {
+export const metadata: Metadata = {
   title: "Projects | Brian Vitualla",
   description: "Projects page of Brian Vitualla's portfolio website",
 };

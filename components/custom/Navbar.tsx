@@ -9,9 +9,7 @@ import { cn } from "@/lib/utils";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleClick = (
-    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement | HTMLAnchorElement>,
-  ) => {
+  const handleClick = () => {
     setIsOpen((oldVal) => !oldVal);
   };
 
@@ -29,7 +27,10 @@ const Navbar = () => {
           >
             Projects
           </NavLink>
-          <NavLink className="px-6 py-3 text-center hover:px-6">
+          <NavLink
+            className="px-6 py-3 text-center hover:px-6"
+            href="/collaborations"
+          >
             Collaborations
           </NavLink>
         </div>
@@ -72,7 +73,9 @@ const Navbar = () => {
           <NavLink href="/projects" onClick={handleClick}>
             Projects
           </NavLink>
-          <NavLink onClick={handleClick}>Collaborations</NavLink>
+          <NavLink href="/collaborations" onClick={handleClick}>
+            Collaborations
+          </NavLink>
         </div>
       </div>
     </nav>
@@ -102,3 +105,5 @@ const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
     );
   },
 );
+
+NavLink.displayName = "NavLink";

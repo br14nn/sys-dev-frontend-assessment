@@ -28,19 +28,19 @@ const ProjectCard = ({
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: true,
-    margin: "0px 0px -80px 0px",
+    margin: "0px 0px -20px 0px",
   });
 
   useEffect(() => {
     if (isInView) {
       animate(scope.current, { opacity: 1, y: 0 }, { duration: 0.3 });
     }
-  }, [isInView]);
+  }, [isInView, animate, scope]);
 
   return (
     <LazyMotion features={domAnimation}>
       <m.div ref={scope} initial={{ opacity: 0, y: 50 }}>
-        <Card className="flex flex-col overflow-hidden border-none bg-amber-100 shadow-lg">
+        <Card className="flex flex-col border-none bg-amber-100 shadow-lg">
           <CardContent className="flex flex-col gap-4 p-6">
             <Image
               className="aspect-[2/1] w-full rounded-md bg-neutral-50 object-cover"

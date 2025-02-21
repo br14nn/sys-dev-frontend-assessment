@@ -24,7 +24,7 @@ const SecondSection = () => {
     if (h2IsInView) {
       h2Animate(h2Scope.current, { opacity: 1, y: 0 }, { duration: 0.3 });
     }
-  }, [h2IsInView]);
+  }, [h2IsInView, h2Scope, h2Animate]);
 
   return (
     <section className="flex h-fit w-full items-start justify-center bg-sky-200">
